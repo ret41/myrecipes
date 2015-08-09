@@ -1,0 +1,23 @@
+
+
+<%= render 'shared/errors', obj: @recipe %>
+
+<div class = "row">
+  <div class = "well col-md-8 col-md-offset-2">
+    <%= form_for @recipe do |f| %>               <!--Model backed form-->
+      <%= f.label :name %>                      <!--Space for name and text field for name-->
+      <%= f.text_field :name %>
+      
+      <%= f.label :summary %>
+      <%= f.text_field :summary %>
+      
+      <%= f.label :description %>
+      <%= f.text_area :description, rows: 10 %>         <!--This gives a larger area to write text into-->
+      
+      <%= f.submit(@recipe.new_record?  ?  "Create Recipe" : 'Edit Recipe', class: "btn btn-success") %>
+      <!--.new_record is a boolean method that returns true if a new record (recipe) is being created.
+      if it is, then Create Recipe is displayed on link, else (represented by colon), render "Edit Recipe"
+      <% end %>
+  </div>
+  
+</div>

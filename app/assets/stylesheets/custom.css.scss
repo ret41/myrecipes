@@ -2,7 +2,7 @@ $navbar-default-bg: #312312;
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
-
+/*comment syntax*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -64,4 +64,25 @@ h2{
     border-top: 1px solid #eaeaea;
     color: #777;
     
+}
+.chef_info{
+  margin-top: 10px;                                    /* moves chefname image on /recipes route down by 10px;*/
+  
+}
+.gravatar {
+  
+  border-radius: 10px;                                /*changes gravatar image that shows chef gravatar on /recipes route to a more of a rounded square */                               
+  
+}
+.well {                                              /*changes background color of new recipe area */
+  background-color:#EDEDED;
+}
+input, textarea, select, .uneditable-input {
+  border: 3px solid #d2d2d2;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.input{
+  height: auto !important;
 }

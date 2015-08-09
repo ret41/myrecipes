@@ -1,0 +1,13 @@
+<div class = "row">
+  <div class = "col-md-10">
+    
+    <% flash.each do |message_type, message| %>
+      
+      <div class = "alert alert-<%= message_type %>"> <%= message %> <!--Twitter bootstrap class. This will show correct message.-->
+        <a class = "close" data-dismiss = "alert">&#215;</a> <!--anchor tag that closes box. &#215; is the HTML code for the cross in the corner-->
+      </div>
+    <% end %>
+    
+  </div>
+  
+</div>

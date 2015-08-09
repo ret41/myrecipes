@@ -1,0 +1,18 @@
+<% if obj.errors.any? %> <!--Any potential validation errors will be caught and stored in recipe object upon submission.
+                                we can access these using .errors.any method that tells you of any errors associated with the object.
+                                We can display these errors using .full.messeges method.-->
+  <div class = "row">
+    <div class = "alert alert-danger col-md-8 col-md-offset-2">
+      
+      <h5>Please Correct the following errors:</h5>
+      
+      <ul><!--List to show all errors.-->
+        <% obj.errors.full_messages.each do |msg| %><!--Iterate through ALL messages-->
+          <li><%= msg %></li><!--This will show the appropriate message-->
+        <% end %>
+      </ul>
+      
+    </div>
+    
+  </div>
+<% end %>
